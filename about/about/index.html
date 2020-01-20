@@ -197,6 +197,29 @@
           
                  
           
+    
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b7274cfb0b2269dbfc73',
+    clientSecret: 'f9c0a4a1d402173c836035b5d60298827e594a72',
+    repo: 'https:\/\/github.com\/fllife\/fllife.github.io.git',
+    owner: 'fllife',
+    admin: ['fllife'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
     </div>
 </article>
           </div>
